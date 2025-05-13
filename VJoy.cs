@@ -21,7 +21,7 @@ namespace DSRemapper.VJoyCtrl
         /// <inheritdoc/>
         public bool IsConnected { get; private set; }
         /// <inheritdoc/>
-        public IDSRInputReport State { get; private set; }
+        public IDSRInputReport State { get; set; }
 
         /// <summary>
         /// VJoy controller class constructor
@@ -72,7 +72,7 @@ namespace DSRemapper.VJoyCtrl
             GC.SuppressFinalize(this);
         }
         /// <inheritdoc/>
-        public DefaultDSROutputReport GetFeedbackReport()
+        public IDSROutputReport GetFeedbackReport()
         {
             return report;
         }
