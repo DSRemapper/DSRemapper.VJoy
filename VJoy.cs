@@ -42,6 +42,7 @@ namespace DSRemapper.VJoyCtrl
         /// Connects to VJoy controller with the specified id
         /// </summary>
         /// <param name="id">The id of the VJoy controller</param>
+        [CustomMethod("ConnectById")]
         public void Connect(uint id)
         {
             if(!this.id.HasValue)
