@@ -11,7 +11,7 @@ env:
   IS_CI_BUILD: true
   DSRPACKAGER_EXE: 'DSRPackager'
   ZIPPER_FOLDER_NAME: './'
-  PLUGIN_NAME: "DSRemapper.ViGEm"
+  PLUGIN_NAME: "DSRemapper.VJoy"
   PLUGIN_DESC: "Official plugin that includes Direct Input emulation using VJoy. This plugin is Windows only."
 
 jobs:
