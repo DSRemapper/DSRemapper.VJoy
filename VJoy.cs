@@ -11,6 +11,9 @@ namespace DSRemapper.VJoyCtrl
     [EmulatedController("VJoy")]
     public class VJoyCtrl : IDSROutputController
     {
+        static VJoyCtrl(){
+            UDManager.RegisterProduct(0x1234,0xBEAD,5000);
+        }
         private readonly uint range;
         private readonly VJoy joy = new();
         private VJoy.JoystickState vState = new();
@@ -70,7 +73,6 @@ namespace DSRemapper.VJoyCtrl
         public void Dispose()
         {
             Disconnect();
-            GC.SuppressFinalize(this);
         }
         /// <inheritdoc/>
         public IDSROutputReport GetFeedbackReport()
